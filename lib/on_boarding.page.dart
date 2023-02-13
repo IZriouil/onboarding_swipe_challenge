@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:custom_swipe_challenge/config/custom_controller.dart';
 import 'package:flutter/material.dart';
 
@@ -25,15 +23,7 @@ class _AnimatedButtonState extends State<AnimatedButton> {
   @override
   void initState() {
     super.initState();
-    // widget.controller.page.addListener(() {
-    //   if (leftColor != _colors[widget.controller.page.page!.floor()] ||
-    //       rightColor != _colors[widget.controller.page.page!.ceil()]) {
-    //     setState(() {
-    //       leftColor = _colors[widget.controller.page.page!.floor()];
-    //       rightColor = _colors[widget.controller.page.page!.ceil()];
-    //     });
-    //   }
-    // });
+
     widget.controller.closeAnimation.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         setState(() {
@@ -55,20 +45,6 @@ class _AnimatedButtonState extends State<AnimatedButton> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // PageView(
-        //   scrollBehavior: WindowsScrollBehaviour(),
-        //   children: [
-        //     Container(
-        //       color: Colors.red,
-        //     ),
-        //     Container(
-        //       color: Colors.green,
-        //     ),
-        //     Container(
-        //       color: Colors.blue,
-        //     ),
-        //   ],
-        // ),
         Container(
           color: _colors[_currentPage],
         ),
@@ -157,7 +133,7 @@ class _AnimatedButtonState extends State<AnimatedButton> {
                     color: _colors[_currentPage - 1],
                     shape: BoxShape.circle,
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.chevron_left,
                     color: Colors.white,
                   ),

@@ -1,9 +1,5 @@
 import 'package:custom_swipe_challenge/config/custom_controller.dart';
-import 'package:custom_swipe_challenge/config/extension.dart';
-import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 const List<Color> _colors = [
@@ -50,7 +46,7 @@ class _LogoAnimatedWidgetState extends State<LogoAnimatedWidget> {
             fontSize: (_currentPage == _colors.length - 1) ? 70 : 35,
             color: (_currentPage == _colors.length - 1) ? Colors.black : Colors.white70,
             fontWeight: FontWeight.bold),
-        child: Text(
+        child: const Text(
           "Steizy",
           textAlign: TextAlign.center,
         ),
@@ -61,11 +57,11 @@ class _LogoAnimatedWidgetState extends State<LogoAnimatedWidget> {
   Alignment _getAlignment() {
     switch (_currentPage) {
       case 0:
-        return Alignment.topCenter + const Alignment(0.7, 0.15);
+        return Alignment.topCenter + const Alignment(0.7, 0.22);
       case 1:
-        return Alignment.topCenter + const Alignment(-.5, .8);
+        return Alignment.topCenter + const Alignment(-.5, .85);
       case 2:
-        return Alignment.topCenter + const Alignment(.30, .05);
+        return Alignment.topCenter + const Alignment(.30, .13);
       case 3:
         return Alignment.center + const Alignment(0, .1);
       default:

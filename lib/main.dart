@@ -1,9 +1,14 @@
 import 'package:custom_swipe_challenge/app.dart';
-import 'package:custom_swipe_challenge/on_boarding.page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      systemNavigationBarColor: Colors.black,
+      statusBarColor: Colors.white,
+      statusBarBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.dark));
 }
 
 class MyApp extends StatelessWidget {

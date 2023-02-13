@@ -17,7 +17,7 @@ class SinglePage extends StatelessWidget {
     if (index == 3) {
       return Center(
         child: Padding(
-          padding: const EdgeInsets.all(60),
+          padding: const EdgeInsets.all(50),
           child: IntrinsicHeight(
             child: Column(
               children: [
@@ -40,6 +40,9 @@ class SinglePage extends StatelessWidget {
 
     return Column(
       children: [
+        const SizedBox(
+          height: 30,
+        ),
         Expanded(
           child: Image.asset(
             'assets/images/${index + 1}.png',
