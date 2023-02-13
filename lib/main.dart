@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    print("==> IZR / Design Challenge: On Boarding Custom Scroll (Flutter 3.7.1)");
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
